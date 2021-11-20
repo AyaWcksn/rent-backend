@@ -1,7 +1,7 @@
 const express = require("express")
-const bodyParser = require('body-parser')
-const morgan = require("morgan")
-const cors = require("cors")
+        , bodyParser = require('body-parser')
+        , morgan = require("morgan")
+        , cors = require("cors")
 
 // Import modules
 require('./lib/db')
@@ -32,5 +32,6 @@ app.get('/', function(req, res) {
 })
 
 //Start the application
-app.listen(port)
-console.log("Application running at: ", port)
+app.listen(port, () => {
+        console.log("🚀 server running at: ", port)
+})
